@@ -1,0 +1,172 @@
+@-moz-document url-prefix("https://mail.google.com/mail/") {
+
+    /* ============================================================
+       1. GLOBAL ACCESSIBILITY: TEXT DENSITY & CONTRAST
+       ============================================================ */
+    *, *::before, *::after {
+        font-weight: 700 !important;
+        color: #000 !important; /* Force black text everywhere */
+        -webkit-font-smoothing: antialiased !important;
+    }
+
+    /* ============================================================
+       2. SCROLLBAR: 24px (MAXIMUM CLICK TARGET)
+       ============================================================ */
+    ::-webkit-scrollbar {
+        width: 24px !important;
+        height: 24px !important;
+        background-color: #f1f1f1 !important;
+        display: block !important;
+    }
+    ::-webkit-scrollbar-track {
+        forced-color-adjust: none !important; 
+        background-color: #f1f1f1 !important;
+        border-left: 3px solid #000 !important;
+    }
+    ::-webkit-scrollbar-thumb {
+        forced-color-adjust: none !important; 
+        background-color: #333 !important; 
+        border: 4px solid #f1f1f1 !important; 
+    }
+    ::-webkit-scrollbar-button {
+        forced-color-adjust: none !important;
+        display: block !important;
+        height: 24px !important;
+        background-color: #ddd !important;
+        background-repeat: no-repeat;
+        background-size: 14px !important;
+        background-position: center;
+    }
+    ::-webkit-scrollbar-button:vertical:decrement {
+        background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' fill='black'><polygon points='50,20 90,80 10,80'/></svg>") !important;
+    }
+    ::-webkit-scrollbar-button:vertical:increment {
+        background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' fill='black'><polygon points='50,80 90,20 10,20'/></svg>") !important;
+    }
+
+    /* ============================================================
+       3. HEADER & SEARCH: CLEAR VISUAL LANDMARKS
+       ============================================================ */
+
+    /* BURGER MENU (As defined in your code) */
+    .gb_tc.gb_uc, .gb_tc svg, .gb_Lc.gb_Mc, div[aria-label="Main menu"] {
+        border: 3px solid #000 !important;
+        background-color: #fff !important;
+        padding: 5px !important;
+        margin-right: 10px !important;
+        border-radius: 6px !important;
+    }
+
+    /* SEARCH FIELD: Bold border, no internal 'pill' distractions */
+    header form {
+        background: #fff !important;
+        border: 3px solid #000 !important;
+        height: 56px !important;
+        align-items: center !important;
+        box-shadow: none !important;
+    }
+
+    .gb_re, .gb_he, .gb_ie, .gb_ge, .gb_fe, .gb_ve, .gb_ee, .gb_ve input {
+        border: none !important;
+        box-shadow: none !important;
+        background: transparent !important;
+    }
+
+    .gb_xe svg, .gb_he svg, button[aria-label="Search"] svg {
+        fill: #000 !important;
+        scale: 1.8 !important;
+        opacity: 1 !important;
+    }
+
+    /* TOP RIGHT ICONS: Large boxed targets */
+    .gb_wa, .gb_Sa, .gb_pa, .gb_A, .gb_7c, .gb_id {
+        border: 3px solid #000 !important;
+        background-color: #eee !important;
+        height: 50px !important;
+        width: 50px !important;
+        margin-left: 10px !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+
+    /* ============================================================
+       4. NAVIGATION & TABS (ACCESSIBILITY BORDERS)
+       ============================================================ */
+
+    /* Action Bar (Select/Refresh) */
+    .G-Ni .J-J5-Ji, .J-JN-I-Kq {
+        border: 2px solid #000 !important;
+    }
+
+    /* TABS: Separated with borders for clear category selection */
+    .aAy {
+        border: 3px solid #000 !important;
+        margin-right: 8px !important;
+        background-color: #fff !important;
+        height: 40px !important;
+        display: flex !important;
+        align-items: center !important;
+    }
+    
+    .aAy.aAt {
+        background-color: #ddd !important;
+        border-bottom: 5px solid #000 !important;
+    }
+
+    /* COMPOSE BUTTON: Large primary target */
+    .T-I-KE, .z0 > .L3 {
+        border: 3px solid #000 !important;
+        background-color: #fff !important;
+        color: #000 !important;
+        border-radius: 8px !important;
+        height: 50px !important;
+        min-width: 140px !important;
+    }
+
+    /* ============================================================
+       5. EMAILS: UNREAD HIGHLIGHT (HIGH CONTRAST)
+       ============================================================ */
+    .zE { background-color: #fff9c4 !important; border-bottom: 2px solid #000 !important; }
+    .zE .bog, .zE .y6 { font-weight: 900 !important; color: #000 !important; }
+    .yO { background-color: #ffffff !important; border-bottom: 1px solid #ccc !important; }
+
+    /* ============================================================
+       6. EMAIL COMPOSER: UNIFIED BORDERED BOX
+       ============================================================ */
+    
+    /* The outer container of the entire popup */
+    .dw, .AD {
+        border: 4px solid #000 !important;
+        border-radius: 0px !important;
+        box-shadow: 12px 12px 0px rgba(0,0,0,0.15) !important;
+        background-color: #fff !important;
+        overflow: hidden !important;
+    }
+
+    /* Header of the compose window */
+    .Hp, .Ha, .aYF {
+        background-color: #eee !important;
+        border-bottom: 2px solid #000 !important;
+        margin: 0 !important;
+    }
+
+    /* Toolbar at the bottom */
+    .btC {
+        border-top: 2px solid #000 !important;
+        background-color: #f1f1f1 !important;
+        margin: 0 !important;
+        padding: 10px !important;
+    }
+
+    /* Clean up the table rendering inside the composer */
+    .iz { border-collapse: collapse !important; width: 100% !important; }
+
+    /* ============================================================
+       7. STRUCTURE & LAYOUT FIXES
+       ============================================================ */
+    .AO, .ae4, .nH.oy8Mbf { overflow-y: hidden !important; }
+    .ae4.UI.pY, .ae4 > div[role="main"], .nn, .AJ.bhZ { overflow-y: scroll !important; }
+    body { overflow-x: hidden !important; }
+    svg { fill: #000 !important; opacity: 1 !important; }
+}
