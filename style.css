@@ -107,10 +107,31 @@
         background-color: #fff !important;
         height: 40px !important;
     }
+    
+    .J-KU-KO {
+        background: #fff9c4 !important;
+    }
 
-    .aAy.aAt {
-        background-color: #ddd !important;
-        border-bottom: 5px solid #000 !important;
+
+    
+    .J-KU-KO::before {
+        background-color: #000 !important;      
+        border-top-left-radius: 0 !important;      
+        border-top-right-radius: 0 !important;      
+        bottom: 0 !important;      
+        content: "" !important;      
+        display: block !important;      
+        height: 3px !important;      
+        left: 0 !important;      
+        margin: 0 0 !important;      
+        position: absolute !important;      
+        right: 0 !important;      
+    }
+    
+    
+
+    .J-KU-Jg-K9.aAA .J-KU-KO.aAy {
+        background-color: #fff9c4 !important;
     }
 
     /* BOUTON NOUVEAU MESSAGE */
