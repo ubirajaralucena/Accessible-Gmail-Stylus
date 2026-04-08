@@ -97,6 +97,23 @@
     .asa svg {
         transform: scale(1.3);
     }
+    
+    .WR .z0 {
+        margin: 4px 0 8px 0 !important;
+    }
+    
+    .WR .z0>.L3 {
+        border-radius: 6px !important;
+        border width: 3px !important;
+        color: rgb(95, 99, 104) !important;
+        height: 32px !important;
+        margin-left: 4px !important;
+    }
+    
+    .WR .z0>.L3::before {
+        margin-left: -4px !important;
+        margin-right: 0px !important;
+    }
 
     /* ============================================================
        5. NAVIGATION & ONGLETS
